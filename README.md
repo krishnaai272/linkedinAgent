@@ -42,7 +42,7 @@ agentProject/
 └── README.md
 
 yaml
-Copy code
+
 
 ---
 
@@ -71,15 +71,13 @@ Agent Pattern	ReAct-style reasoning & reflection
 🧾 Evaluation
 Run a simple QA-based evaluation:
 
-bash
-Copy code
+
 python -m src.evaluation
 📢 LinkedIn Post Generation (Agent Output)
 The agent can generate a professional LinkedIn post automatically.
 Try this inside the CLI:
 
-css
-Copy code
+
 Generate a LinkedIn post about your purpose and tools used.
 🎯 Purpose of This Project
 This project was designed as a capstone-style learning exercise inspired by the Ciklum AI Academy, to demonstrate modern AI techniques:
