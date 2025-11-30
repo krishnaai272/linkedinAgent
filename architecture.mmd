@@ -1,0 +1,58 @@
+<!-- architecture.mmd -->
+flowchart TD
+
+%% =====================
+%% SIMPLE PROJECT OVERVIEW
+%% =====================
+
+%% --- USER INPUT ---
+U[🧑 User<br>CLI or Prompt] --> CD
+
+%% --- CLI DEMO ---
+CD[💬 cli_demo.py<br>Runs the agent & prints replies] --> AC
+
+%% --- MAIN AGENT ---
+AC[🧠 agent_core.py<br>Agent Reasoning + Groq LLM<br>RAG + Tools + Reflection]
+
+%% --- DECISION: TOOL OR DIRECT ANSWER ---
+AC -->|Needs data| TR
+AC -->|Answer directly| OUT[💡 Final Response + Reflection]
+
+%% --- TOOL REGISTRY ---
+TR[🧰 tools.py<br>TOOL_REGISTRY] --> T1
+TR --> T2
+TR --> T3
+TR --> T4
+
+%% --- RAG TOOL ---
+T1[🔎 rag_search()] --> RP
+RP[📄 rag_pipeline.py] --> KB[(📘 knowledge_base.md)]
+RP --> VS[(🧠 Vector Store: FAISS + Embeddings)]
+
+%% --- FILE TOOLS ---
+T2[📂 list_repo_files()] --> Repo[📁 Repository Files]
+T3[📄 read_file()] --> Repo
+
+%% --- EVALUATION TOOL ---
+T4[📊 run_eval_on_qa_set()] --> QA[(data/qa_eval_set.json)]
+
+%% --- OUTPUT SECTION ---
+AC --> PG
+PG[📢 post_generator.py<br>Creates LinkedIn-style posts]
+
+%% --- FINAL ---
+OUT --> U
+PG --> U
+
+%% =====================
+%% LEGEND (READ ONLY)
+%% =====================
+classDef agent fill:#ffe6cc,stroke:#d35400;
+classDef tool fill:#d6f5ff,stroke:#006699;
+classDef file fill:#f8d7da,stroke:#c0392b;
+classDef process fill:#e8f5e9,stroke:#2ecc71;
+
+class AC agent
+class TR,T1,T2,T3,T4 tool
+class Repo,KB,QA file
+class RP,PG process

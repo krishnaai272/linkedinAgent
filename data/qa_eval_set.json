@@ -1,0 +1,17 @@
+[
+  {
+    "question": "What is Retrieval-Augmented Generation (RAG) and why is it useful in this project?",
+    "reference_answer": "RAG combines a retriever and a generator so the model can ground its answers in external documents instead of relying only on parameters. In this project it uses a local knowledge base to give grounded, explainable answers.",
+    "keywords": ["retrieval", "documents", "knowledge base"]
+  },
+  {
+    "question": "What is the goal of this agentic project in the Ciklum AI Academy context?",
+    "reference_answer": "The goal is to build an agentic AI system that uses RAG, tools, and reflection to analyze its own repository and generate a professional social post as part of the Ciklum AI Academy.",
+    "keywords": ["Ciklum", "AI Academy", "agent", "RAG"]
+  },
+  {
+    "question": "How does the agent perform self-reflection on its answers?",
+    "reference_answer": "After answering, the agent adds a Reflection sentence that comments on its confidence, possible improvements, or limitations.",
+    "keywords": ["reflection", "confidence", "improve"]
+  }
+]
