@@ -109,13 +109,9 @@ Python AI Projects 🧩
 
 Built with passion for AI engineering & learning!
 
-yaml
-Copy code
 
 ---
 
-Let me know when you've **pushed this README.md to GitHub** —  
-I will give you **demo video script + viva questions + submission form answers** next. 🔥🚀
 
 
 
