@@ -51,15 +51,18 @@ yaml
 ```bash
 pip install -r requirements.txt
 python -m src.cli_demo
+
+
 🧠 Example Prompts to Try
-swift
-Copy code
+
 How were you built?
 Please list repository files.
 Read file: README.md
 What is RAG and why is it used here?
 Generate a LinkedIn post about yourself.
 Run a self evaluation.
+
+
 🔧 Technologies Used
 Component	Technology
 Embeddings	Hugging Face – MiniLM
